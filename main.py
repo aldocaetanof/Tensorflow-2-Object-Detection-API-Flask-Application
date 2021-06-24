@@ -69,10 +69,6 @@ def infer():
     return Response(response=response_encoded, status=200, mimetype="application/json")
 
 
-# start flask app
-def main():
-  args = parse_args()
-  app.run(host=args.host, port=args.port, debug=args.debug)
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=9090)
